@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/images/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+      <!--Creating an UI element for passsword criteria selection-->
+      <div class="prompt-window">
+        <!--The button that will close the prompt window-->
+        <button class="close-window">
+          <i class="icofont-close-line icofont-3x"></i>
+        </button>
+        <!--Making password length selection-->
+        <div class="user-input" id="user-input-1">
+          <h2>Please select desired length of your password</h2>
+          <div class="length-options">
+            <button class="length-option" id="length-option-1">
+              6 - 12 characters
+            </button>
+            <button class="length-option" id="length-option-2">
+              8 - 128 characters
+            </button>
+          </div>
+        </div>
+        <!--Making selection for types of characters that will make up the password-->
+        <div class="user-input" id="user-input-2">
+          <h2>Please select character types to include</h2>
+          <div class="character-options">
+            <button class="character-option" id="character-option-1">
+              Uppercase
+            </button>
+            <button class="character-option" id="character-option-2">
+              Lowercase
+            </button>
+            <button class="character-option" id="character-option-3">
+              Numeric
+            </button>
+            <button class="character-option" id="character-option-4">
+              Special Characters
+            </button>
+          </div>
+          <!--Confirm selections and generate password-->
+          <div class="confirm-button">
+            <button class="generate" id="submit">Generate</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
